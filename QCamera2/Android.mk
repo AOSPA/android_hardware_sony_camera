@@ -66,10 +66,6 @@ LOCAL_C_INCLUDES += \
 
 ifeq (1,$(filter 1,$(shell echo "$$(( $(PLATFORM_SDK_VERSION) >= 24 ))" )))
 LOCAL_C_INCLUDES += \
-        hardware/qcom/media/msm8974/libstagefrighthw \
-        hardware/qcom/media/msm8974/mm-core/inc
-else
-LOCAL_C_INCLUDES += \
         hardware/qcom/media/libstagefrighthw \
         hardware/qcom/media/mm-core/inc
 endif
@@ -99,7 +95,7 @@ endif
 LOCAL_C_INCLUDES += \
         $(TARGET_OUT_HEADERS)/qcom/display
 LOCAL_C_INCLUDES += \
-        hardware/qcom/display/msm8994/libqservice
+        hardware/qcom/display/libqservice
 LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
